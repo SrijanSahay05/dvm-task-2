@@ -1,0 +1,41 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Search for Trains</h2>
+
+    <form action="#" method="GET" class="border p-4 rounded bg-light">
+        <div class="row mb-3">
+            <!-- From Station -->
+            <div class="col-md-6">
+                <label for="from_station" class="form-label">From Station</label>
+                <input type="text" class="form-control" id="from_station" name="from_station" placeholder="Enter departure station" required>
+            </div>
+
+            <!-- To Station -->
+            <div class="col-md-6">
+                <label for="to_station" class="form-label">To Station</label>
+                <input type="text" class="form-control" id="to_station" name="to_station" placeholder="Enter destination station" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <!-- Date of Travel -->
+            <div class="col-md-6">
+                <label for="date_of_travel" class="form-label">Date of Travel</label>
+                <input type="date" class="form-control" id="date_of_travel" name="date_of_travel" required>
+            </div>
+
+            <!-- Number of Passengers -->
+            <div class="col-md-6">
+                <label for="num_passengers" class="form-label">Number of Passengers</label>
+                <input type="number" class="form-control" id="num_passengers" name="num_passengers" min="1" value="1" required>
+            </div>
+        </div>
+
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Search Trains</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
